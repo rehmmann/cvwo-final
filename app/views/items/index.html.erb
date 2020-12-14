@@ -1,0 +1,13 @@
+<h1><%= @title %></h1>
+<p>Find me in app/views/items/new.html.erb</p>
+
+<%= text_field(:person, :name) %>
+
+<%= form_for :item do |f| %>
+
+<p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+</p>
+
+<% end %>
