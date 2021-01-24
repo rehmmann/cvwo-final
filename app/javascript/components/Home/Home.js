@@ -1,25 +1,17 @@
-import React, { Component } from 'react'
-import Jumbotron from './Jumbotron'
-
-class Home extends Component{
-    constructor(){
-        super()
-
-        this.state = 1
-    }
+import React, { Component, Fragment } from 'react';
+import Jumbotron from './Jumbotron';
+import Header from './Header';
 
 
-    render(){
+
+    function Home() {
         return(
-            <div>
-
+            <Fragment>
+                <Header/>
                 <Jumbotron/>
-                <h1>
-                    I am testing this
-                </h1>
-            </div>
+            </Fragment>
         )
     }
-}
+
 
 export default Home
