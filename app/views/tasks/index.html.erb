@@ -1,26 +1,49 @@
 <p id="notice"><%= notice %></p>
 
+<%
+=begin%>
+ <%= search_form_for @search do |f| %>
+  <div class="field">
+
+    <%= f.label :task_name_cont,"DSFFSA"%>
+    <%= f.search_field :task_name_cont %>
+
+</div>
+
+<%= f.submit "Search" %>
+
+<%end%>
+
+<%= search_form_for(@search, format: :pdf) do |f| %>
+<%end%>
+
+ <%= search_form_for(@search, format: :json) do |f| %> 
+<%end%>
+
+<br/> 
+<%
+=end%>
+
 <h1>Tasks</h1>
 
-<table class="table table-hover table-striped">
+<table class="table table-hover table-striped table-hover">
   <thead>
     <tr>
       <th>Name</th>
       <th>Detail</th>
-      <th>Tag</th>
-      <th colspan="3"></th>
+      <th>Tag</th>  
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.task_name %></td>
+        <td><%= task.task_name %></td> 
         <td><%= task.detail %></td>
         <td><%= task.tag %></td>
-        <td><%= link_to 'Show', task ,class:"btn btn-light"%></td>
-        <td><%= link_to 'Edit', edit_task_path(task) ,class:"btn btn-light"%></td>
-        <td><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-light" %></td>
+        <td><%= link_to 'Show', task ,class:"btn btn-light btn-sm"%></td>
+        <td><%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-outline-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>

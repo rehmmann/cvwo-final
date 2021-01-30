@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-root 'welcome#index' #root is welcome controller and index action
+root 'tasks#index' #root is welcome controller and index action
 
 
 get 'items/new' 

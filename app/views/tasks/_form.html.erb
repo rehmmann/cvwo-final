@@ -10,20 +10,27 @@
       </ul>
     </div>
   <% end %>
-
+<br/>
   <div class="field">
-    <%= form.label :task_name,class:"h6" %>
-    <%= form.text_field :task_name,class:"form-control" %>
+    <%
+=begin%>
+ <%= form.label :task_name,class:"h6" %> 
+<%
+=end%>
+    <%= form.text_field :task_name,class:"form-control",id:"floatingInput", placeholder:"Task"%>
   </div>
 
   <div class="field">
-    <%= form.label :detail,class:"h6"  %>
-    <%= form.text_field :detail,class:"form-control" %>
+    <%
+=begin%>
+ <%= form.label :detail,class:"h6"  %> 
+<%
+=end%>
+    <%= form.text_field :detail,class:"form-control",placeholder:"Details"%>
   </div>
 
   <div class="field">
-    <%= form.label :tag ,class:"h6"  %>
-    <%= form.text_field :tag,class:"form-control" %>
+    <%= form.text_field :tag,class:"form-control",placeholder:"Tag"%>
   </div>
 <br/>
   <div class="actions">

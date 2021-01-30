@@ -7,7 +7,7 @@ import Header from './Header';
     function Home() {
         return(
             <Fragment>
-                <Header/>
+                {/* <Header/> */}
                 <Jumbotron/>
             </Fragment>
         )
